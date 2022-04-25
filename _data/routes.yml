@@ -3,5 +3,15 @@ pages:
     url: /download
   - title: Buy
     url: /buy
+  - title: Documentation
+    url: /documentation/introduction
+    dir: /documentation/
+    subpages:
+      - title: Introduction
+        url: /documentation/introduction
+      - title: Language Guide
+        url: /documentation/language-guide
+      - title: Language Reference
+        url: /documentation/language-reference
   - title: Support
     url: /support
