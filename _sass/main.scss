@@ -131,7 +131,7 @@ p.redmine-step {
 ol.claim {
   margin-left: 2rem;
   margin-right: 2rem;
-  line-height: $extended-line-height
+  line-height: $extended-line-height;
 
   & li::marker {
     color: $primary-accent-color;
@@ -641,7 +641,7 @@ form.contact {
 
 @keyframes boost-explosion-keyframes {
   /*0% { transform:  skewX(0deg) translateX(0px); }*/
-  30% { transform: skewX(30deg )translateX(0px); }
+  30% { transform: skewX(30deg ) translateX(0px); }
   100% { transform: skewX(30deg) translateX(10000px); }
 }
 
