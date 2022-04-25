@@ -6,12 +6,12 @@ layout: default
   <aside class="sidebar-left">
     <nav>
       <ul>
-        {% assign doc = site.data.routes.pages | find: "title", "Documentation" %}
+        {% assign doc = site.data.routes.pages | where: "title", "Documentation" | first %}
         {% if doc %}
-        {% for item in doc.subpages %}
-        {% if item.url == page.url %}<li class="current-page">{{ item.title }}</li>
-        {% else %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endif %}
-        {% endfor %}
+          {% for item in doc.subpages %}
+            {% if item.url == page.url %}<li class="current-page">{{ item.title }}</li>
+            {% else %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endif %}
+          {% endfor %}
         {% endif %}
       </ul>
     </nav>
