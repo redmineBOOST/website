@@ -1,0 +1,27 @@
+---
+layout: default
+title: Download
+id: download
+---
+<p><strong>redmineBOOST</strong> can be downloaded and tested for free with a trial license. By downloading the software you agree with the terms and conditions described in the <a href="/eula">End User License Agreement</a> (EULA). If it is intended to use <strong>redmineBOOST</strong> beyond a trial, it must be purchased.</p>
+
+<p><em>Executables are available for 64 bit platforms only.</em> Optionally <strong>redmineBOOST</strong> can be downloaded with a tutorial.</p>
+
+<h1>Download</h1>
+
+<p>Version: {{ site.data.releases.version }}</p>
+
+<p>
+    <input type="checkbox" id="with-tutorial-button" name="with-tutorial" onclick="set_download_urls(this.checked)">
+    <label for="with-tutorial-button">Download with tutorial.</label>
+</p>
+
+<div class="downloads">    
+    {% for download in site.data.releases.downloads %}
+    <a class="download-button" href="#" data-baseurl="{{ site.data.releases.baseurl }}" data-platform="{{ download.platform }}" data-version="{{ site.data.releases.version }}">Download for {{ download.name }}<br/>({{ download.size }} MB)
+        <p>{{ download.supportedOs }}</p>
+    </a>
+    {% endfor %}
+</div>
+
+<script src="{{ "/assets/js/download.js" | relative_url }}"></script>

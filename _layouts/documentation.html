@@ -1,0 +1,59 @@
+---
+layout: default
+---
+
+<div class="documentation">
+  <aside class="sidebar-left">
+    <nav>
+      <ul>
+        {% assign doc = site.data.routes.pages | find: "title", "Documentation" %}
+        {% if doc %}
+        {% for item in doc.subpages %}
+        {% if item.url == page.url %}<li class="current-page">{{ item.title }}</li>
+        {% else %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endif %}
+        {% endfor %}
+        {% endif %}
+      </ul>
+    </nav>
+  </aside>
+  <div class="content" markdown="1">
+    {{ content }}
+  </div>
+  <aside class="sidebar-right">
+    <ul id="table-of-contents"></ul>
+  </aside>
+  <script>
+    var subheader = false;
+    
+    var content = document.querySelector("div.content");
+    var headers = content.querySelectorAll("h2, h3");
+
+    for(element of headers) {
+      if (element.tagName == "H2") {
+        subheader = false;
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.setAttribute("href", "#" + element.id);
+        a.innerText = element.innerText;
+        li.appendChild(a);
+        document.getElementById("table-of-contents").appendChild(li);
+      }
+      else if (element.tagName == "H3") {
+        if (subheader == false) {
+          subheader = true;
+          var ul = document.createElement("ul");
+          document.getElementById("table-of-contents").appendChild(ul);
+        }
+        var toc = document.getElementById("table-of-contents");
+        var li = document.createElement("li");
+        var a = document.createElement("a");
+        a.setAttribute("href", "#" + element.id);
+        a.innerText = element.innerText;
+        li.appendChild(a);
+        var all_uls = toc.getElementsByTagName("ul");
+        all_uls[all_uls.length - 1].appendChild(li);
+      }
+    }
+  </script>
+  <script src="{{ "/assets/js/hnh_platform.js" | relative_url }}"></script>
+</div>

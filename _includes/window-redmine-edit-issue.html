@@ -1,0 +1,83 @@
+<div class="replace-os window browser">
+    <div class="replace-os window-title-bar">
+        <div class="replace-os controls close"></div>
+        <div class="replace-os controls minimize"></div>
+        <div class="replace-os controls maximize"></div>
+        <div class="replace-os window-title">Redmine - Edit Issue</div>
+        <div class="replace-os browser-address-bar">www.redmine.org/issues/<span class="issue-number-text">2</span></div>
+    </div>
+    <div class="window-content">
+        <h2 class="issue"><span class="tracker-2-text">Tracker</span> #<span class="issue-number-text">2</span></h2>
+        <!-- view -->
+        <div class="show-issue-frame">
+            <h3>Example Issue</h3>
+            <p>Added by <span class="assignee-text">User</span> <span class="issue-create-date">just now</span>.</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td class="issue-attribute-label">Status</td>
+                        <td class="issue-attribute-value">New</td>
+                        <td class="issue-attribute-label">Start date</td>
+                        <td class="issue-attribute-value">today</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-attribute-label">Priority</td>
+                        <td class="issue-attribute-value">Normal</td>
+                        <td class="issue-attribute-label">Due Date</td>
+                        <td class="issue-attribute-value"><span class="issue-due-date-text">today + 30d</span></td>
+                    </tr>
+                    <tr>
+                        <td class="issue-attribute-label">Assignee</td>
+                        <td class="issue-attribute-value"><span class="assignee-text">User</span></td>
+                        <td class="issue-attribute-label">% Done</td>
+                        <td class="issue-attribute-value">0%</td>
+                    </tr>
+                    <tr>
+                        <td class="issue-attribute-label">Tracker</td>
+                        <td class="issue-attribute-value"><span class="tracker-2-text">Tracker</span></td>
+                        <td class="issue-attribute-label"></td>
+                        <td class="issue-attribute-value"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="issue-description-text">Example description</p>
+        </div>
+        <!-- edit -->
+        <h3 class="issue">Edit</h3>
+        <div class="new-issue-frame">
+            <fieldset>
+                <legend>Change Properties</legend>
+            <p><label>Project <span class="required">*</span></label><select>
+                <option class="project-1-text" disabled>Project1</span></option>
+                <option class="project-2-text" disabled>Project2</span></option>
+                <option class="project-3-text" selected>Project3</span></option>
+            </select></p>
+            <p><label>Tracker <span class="required">*</span></label><select>
+                <option class="tracker-1-text" disabled>>Tracker1</span></option>
+                <option class="tracker-2-text" selected>>Tracker2</span></option>
+            </select></p>
+            <p><label>Subject <span class="required">*</span></label><input class="issue-subject-attribute-value issue-subject-attribute-placeholder" type="text" placeholder="Subject" value="Subject"></p>
+            <p><label>Description</label><p>Edit</p></p>
+            <p><label>Status <span class="required">*</span></label><select>
+                <option selected>New</option>
+            </select></p>
+            <p><label>Priority <span class="required">*</span></label><select>
+                <option disabled>Low</option>
+                <option selected>Normal</option>
+                <option disabled>High</option>
+                <option disabled>Urgent</option>
+                <option disabled>Immediate</option>
+            </select></p>
+            <p><label>Assignee</label><select><option selected><< me >></option></select></p>
+            </fieldset>
+            <fieldset>
+                <legend>Notes</legend>
+            <textarea class="user-input note-text note-attribute-placeholder" placeholder="Notes" rows="5"></textarea>
+            </fieldset>
+            <br/>
+            <button>Submit</button><button>Cancel</button>
+        </div>
+        
+        
+    </div>
+</div>

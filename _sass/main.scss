@@ -1,0 +1,781 @@
+$background-color: rgb(240,240,240);
+$primary-accent-color: rgb(230,50,0);
+$secondary-accent-color: rgb(0,180,230);
+$tertiary-accent-color: rgb(184, 221, 159);
+$warning-color: rgb(230,100,0);
+
+$text-color: rgb(50,50,50);
+$link-color: rgb(0, 127, 255);
+$secondary-text-color:  rgb(100,100,100);
+
+$windows-windows-background-color: rgb(247, 249, 252);
+$windows-window-title-bar-color: rgb(238, 244, 249);
+$windows-window-border-color: scale-color($windows-window-title-bar-color, $lightness: -25%);
+
+$macos-windows-background-color: rgb(255,255,255);
+$macos-window-title-bar-color: rgb(220,220,220);
+$macos-window-border-color: scale-color($macos-window-title-bar-color, $lightness: -25%);
+
+$linux-windows-background-color: rgb(247, 247, 247);
+$linux-window-title-bar-color: rgb(50, 48, 48);
+$linux-window-border-color: scale-color($macos-window-title-bar-color, $lightness: -25%);
+$linux-orange: rgb(233, 84, 31);
+$linux-window-title-bar-text-color: rgb(210, 210, 210);
+
+$border-width: 3px;
+
+$content-width: 1100px;
+
+$extended-line-height: 1.3em;
+
+html {
+  background: $background-color;
+}
+body {
+  font-family: sans-serif;
+  font-size: 1.3rem;
+  margin: auto;
+  padding: 1rem;
+  color: $text-color
+}
+
+a {
+  text-decoration: underline;
+  text-decoration-color: $secondary-accent-color;
+  text-decoration-thickness: 0.15em;
+  color: $text-color;
+  
+  &.redmine-boost-logo {
+    display: block;
+    margin-block-start: 2rem;
+    margin-block-end: 1rem;
+    text-decoration: none;
+    text-align: center;
+    font-size: 4rem;
+    color: $primary-accent-color;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  border-bottom: 2px solid $primary-accent-color;
+}
+
+span.redmine-boost-text {
+  display: inline-block;
+  width: max-content;
+  letter-spacing: -0.05em;
+  font-weight: bold;
+
+  span.redmine {
+    color: $primary-accent-color;
+  }
+
+  span.boost {
+    display: inline-block;
+    color: $text-color;
+
+    &:hover {
+      animation-name: boost-explosion-keyframes;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 3s;
+    }
+  }
+}
+
+nav {
+  margin: auto;
+  margin-bottom: 2rem;
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding-inline-start: 0rem;
+    li {
+      display: inline-block;
+      
+      &.current-page {
+        color: $secondary-accent-color;
+        border: none;
+      }
+    }
+  }
+}
+
+em {
+  text-decoration: underline;
+  text-decoration-color: $primary-accent-color;
+  text-decoration-thickness: 0.15em;
+  font-style: normal;
+  color: $text-color;
+}
+
+
+p.redmine-step {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+ol.claim {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  line-height: $extended-line-height
+
+  & li::marker {
+    color: $primary-accent-color;
+  }
+}
+
+hr {
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-top: $border-width solid scale-color($text-color, $lightness: 80%);
+  margin-block-start: 1rem;
+  margin-block-end: 1rem;
+}
+
+input,
+select,
+textarea {
+  border-radius: 3px;
+  border: 1px solid scale-color($background-color, $lightness: -15%);
+  font-size: 1.3rem;
+}
+
+.user-input {
+  font-style: normal;
+  font-weight: bold;
+  border-radius: 3px;
+  background-color: $tertiary-accent-color;
+  border-color: scale-color($tertiary-accent-color, $lightness: -25%);
+  padding: 0.1rem;
+}
+
+input.user-input {
+  border-width: 1pt;
+}
+
+main.wide {
+  max-width: $content-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.benefit {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+
+  p.heading {
+    margin: 0.5rem 0rem;
+    border-bottom: 3px solid scale-color($primary-accent-color, $lightness: 00%);
+  }
+  p.details {
+    margin-top: 0rem;
+    color: scale-color($text-color, $lightness: 20%);
+  }
+}
+
+footer {
+  font-size: 1.2rem;
+  text-align: center;
+  color: $secondary-text-color;
+
+  a {
+    color: $secondary-text-color;
+  }
+
+  path {
+    fill: $primary-accent-color;
+  }
+}
+
+div.window {
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
+  color: #333;
+  font-size: 1rem;
+  margin: 3rem auto;  
+  width: 70%;
+  transition: width 200ms ease-in-out;
+  @media (max-width: 500px) {    
+    width: 95%;
+  }
+  
+  &.macos {
+    border: 1px solid $macos-window-border-color;
+    background-color: $macos-windows-background-color;
+  }
+  
+  &.generic,
+  &.windows {
+    border: 1px solid $windows-window-border-color;
+    background-color: $windows-windows-background-color;
+  }
+  
+  &.linux {
+    border: 1px solid $linux-window-border-color;
+    background-color: $linux-windows-background-color;
+  }
+  
+  input,
+  select,
+  textarea {
+    font-size: 0.7rem;
+  }
+  textarea {
+    width: 60%;
+  }
+
+}
+
+div.window-title-bar {
+  padding: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  
+  &.generic,
+  &.windows {
+    background-color: $windows-window-title-bar-color;
+    border-bottom: 1px solid $windows-window-border-color;
+    flex-direction: row-reverse;
+  }
+
+  &.linux {
+    background-color: $linux-window-title-bar-color;
+    border-bottom: 1px solid $linux-window-border-color;
+    flex-direction: row-reverse;
+    color: $linux-window-title-bar-text-color
+  }
+
+  
+  &.macos {
+    background-color: $macos-window-title-bar-color;
+    border-bottom: 1px solid $macos-window-border-color;
+  }
+  
+  .controls {
+    display: inline-block;
+  }
+  
+  .macos.controls {
+    width: 12px;
+    height: 12px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+  }
+  
+  .generic.controls,
+  .windows.controls {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .linux.controls {
+    width: 16px;
+    height: 16px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  
+  .generic.close,
+  .windows.close {
+    background-color: scale-color($windows-window-border-color, $lightness: -50%);
+    mask: url("/assets/images/close-light.svg");
+    -webkit-mask: url("/assets/images/close-light.svg");
+  }
+  
+  .generic.minimize,
+  .windows.minimize {
+    background-color: scale-color($windows-window-border-color, $lightness: -50%);
+    mask: url("/assets/images/maximize-light.svg");
+    -webkit-mask: url("/assets/images/maximize-light.svg");
+  }
+
+  .generic.maximize,
+  .windows.maximize {
+    background-color: scale-color($windows-window-border-color, $lightness: -50%);
+    mask: url("/assets/images/minimize-light.svg");
+    -webkit-mask: url("/assets/images/minimize-light.svg");
+  }
+
+  .linux.close {
+    border-radius: 50%;
+    background-color: $linux-orange;
+    background-image: url("/assets/images/close-light.svg");
+  }
+  
+  .linux.minimize {
+    background-color: $linux-window-title-bar-text-color;
+    mask: url("/assets/images/maximize-light.svg");
+    -webkit-mask: url("/assets/images/maximize-light.svg");
+  }
+  
+  .linux.maximize {
+    background-color: $linux-window-title-bar-text-color;
+    mask: url("/assets/images/minimize-light.svg");
+    -webkit-mask: url("/assets/images/minimize-light.svg");
+  }
+
+  .macos.close {
+    $close-color: rgb(230,50,0);
+    background-color: $close-color;
+    border-color: scale-color($close-color, $lightness: -50% );
+  }
+  
+  .macos.minimize {
+    $minimize-color: rgb(255,150,0);
+    background-color: $minimize-color;
+    border-color: scale-color($minimize-color, $lightness: -50%);
+  }
+  
+  .macos.maximize {
+    $maximize-color: rgb(150,230,0);
+    background-color: $maximize-color;
+    border-color: scale-color($maximize-color, $lightness: -50%);
+  }
+}
+
+div.window-title {
+  display: inline-block;
+  width: 80%;
+  text-align: center;
+  
+}
+
+div.browser-address-bar {
+  margin: 0.2rem auto;
+  width: 40%;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  
+  &.generic,
+  &.windows {
+    border-radius: 0.3rem;
+    border: 1px solid $windows-window-border-color;
+    background-color: rgb(255,255,255);
+  }
+  
+  &.macos {
+    border-radius: 0.3rem;
+    border: 1px solid $macos-window-border-color;
+    background-color: rgb(255,255,255);    
+  }
+  
+  &.linux {
+    border-radius: 0.3rem;
+    border: 1px solid scale-color($linux-window-title-bar-color, $lightness: -10%);
+    background-color: scale-color($linux-window-title-bar-color, $lightness: +10%);
+  }
+
+}
+
+div.window-content {
+  overflow-x: scroll;
+  padding: 0.5rem;
+}
+
+div.console {
+
+  div.window-content {
+    font-family: monospace;
+  }
+  div.text {
+    margin: 0.2rem;
+    opacity: 0;
+  }
+  
+  div.visible {
+    opacity: 1;
+  }
+
+  .text-cursor {
+    animation-name: text-cursor-keyframes;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+  }
+}
+
+div.browser {
+  label {
+    width: 100px;
+    float: left;
+  }
+  select {
+    width: 150px;
+  }
+  div.new-issue-frame {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgb(230,230,230);
+    background-color: rgb(245,245,245);
+  }
+
+  div.show-issue-frame {
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid rgb(228, 196, 171);
+    background-color: rgb(240, 231, 217);
+  }
+
+  div.created-issue-banner {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0.25rem;  
+    border: 2px solid #9fcf9f;
+    background-color: #dfffdf; 
+    color: #005f00;
+  }
+
+  h2.issue {
+    margin-left: 1rem;
+    font-size: 1.4rem;
+
+    .edit {
+      float: right;
+      margin-right: 1rem;
+      transform: scale(-1, 1);
+    }
+  }
+
+  h3.issue {
+    margin-left: 1rem;
+    border: unset;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td.issue-attribute-label {
+    font-weight: bold;
+  }
+
+  td.issue-relations-action {
+    text-align: right;
+  }
+
+  a {
+    color: $link-color;
+    border: none;
+  }
+  
+  fieldset {
+    border: 1px solid rgb(230,230,230);
+  }
+  
+  legend {
+    font-size: 0.8rem;
+  }
+}
+
+table.features-table {
+  font-size: 0.9em;
+  border-spacing: 0rem;
+  text-align: center;
+  width: 100%;
+  
+  thead th {
+    border-bottom: $border-width solid $primary-accent-color;
+    line-height: 1;
+    
+    p {
+      margin-block: 0.5em;
+      font-size: 0.8em;
+    }
+  }
+
+  th, td {
+    padding: 0.25rem;
+  }
+  
+  tr th:first-child {
+    text-align: right;
+  }
+  
+  span {
+    font-size: 1.5em;
+    
+    &.cross::after {
+      content: "x";
+      color: rgb(255, 61, 0);
+    }
+    
+    &.tick::after {
+      content: "\2713";
+      content: "\25CF";
+      // content: "\2714";
+      // content: "\2295"; // circled plus 
+      //content: "Yes";
+      color: rgb(21, 181, 21);
+    }
+  }
+}
+
+
+div.file {
+
+  div.window-content {
+    background: rgb(240, 231, 214)
+  }
+  
+  td {
+    vertical-align: top;
+    font-size: 0.9rem;
+    
+    pre {
+      margin: 0rem 0.5rem;
+    }
+
+    span.attribute { color: rgb(220, 140, 30); }
+    span.comment { color: gray; }
+    span.item { color: rgb(110, 160, 40); }
+    span.string { color: rgb(200,0,100); }
+    span.function { color: rgb(168, 27, 233); }
+    span.function-parameter { color: rgb(160, 45, 25); }
+    span.keyword { color: rgb(40, 80, 210); }
+    span.value { color: rgb(40, 80, 210); }
+  }
+
+  td.line-numbers {
+    font-family: monospace;
+    padding-right: 0.5rem;
+    
+    &.generic,
+    &.windows {
+      border-right: 1px solid $windows-window-border-color;
+    }
+    
+    &.macos {
+      border-right: 1px solid $macos-window-border-color;
+    }
+
+    &.linux {
+      border-right: 1px solid $linux-window-border-color;
+    }
+
+    
+  }
+
+}
+
+form.contact {
+  font-size: 1.2rem;
+
+  * {
+    font-size: 1.2rem;
+  }
+
+  table {
+    margin: 0rem 2rem;
+    width: 90%;
+    th {
+      font-weight: normal;
+    }
+  }
+  textarea {
+    width: 100%;
+    height: 10rem;
+    
+    &.error {
+      border: $border-width solid $warning-color;
+    }
+  }
+  p.error-description {
+    display: none;
+    &.error {
+      display: block;
+    }
+  }
+}
+
+.downloads {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.download-button {
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.5em;
+  padding: 0.6rem 0.8rem;
+  border-bottom: $border-width solid $secondary-accent-color;
+  background: scale-color($secondary-accent-color, $alpha: -80%);
+  
+  p {
+    font-size: 0.8rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    padding: 0rem;
+  }
+}
+
+@keyframes text-cursor-keyframes {
+  0% {opacity: 0;}
+  25% {opatcity: 1;}
+  75% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+@keyframes boost-explosion-keyframes {
+  /*0% { transform:  skewX(0deg) translateX(0px); }*/
+  30% { transform: skewX(30deg )translateX(0px); }
+  100% { transform: skewX(30deg) translateX(10000px); }
+}
+
+div.documentation {
+
+  @media (max-width: #{$content-width}) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    grid-template-areas: "sidebar-left"
+                         "sidebar-right"
+                         "content";      
+  }
+
+  font-size: 1rem;
+  display: grid;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  grid-template-columns: 3fr 1fr; 
+  gap: 20px;
+  grid-template-areas: "sidebar-left sidebar-left"
+                       "content sidebar-right";
+
+  p {
+    line-height: $extended-line-height;
+    
+    code {
+      font-size: 1rem;
+      font-weight: bold;
+      padding: .05em .15em;
+      border-radius: .2em;
+    }
+  }
+
+  nav {
+    margin-bottom: 0rem;
+    ul {
+      margin-block: 0rem 0rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2rem ;
+      li {
+        text-align: left;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  ul {
+    li {
+      padding: 0.3rem;
+    }
+  }
+  
+  // FIXME: use better style name
+  aside.sidebar-right {
+    display: none;
+    @media (min-width: calc( #{$content-width} + 1px ) )  {
+      display: block;
+      top: 0;
+      height: 100vh;
+      position: sticky;
+      overflow-x: auto;
+      overflow-y: auto;
+    }
+    
+    a {
+      //color: scale-color($text-color, $lightness: 80%);
+    }
+  }  
+  
+  .content {
+    grid-area: content;
+    min-width: 0;
+  }
+  
+  // FIXME: is this style still in use?
+  .sidebar-left {
+    grid-area: sidebar-left;
+    box-sizing: border-box;
+  }
+
+  // FIXME: use better style name
+  .sidebar-right {
+    grid-area: sidebar-right;
+    box-sizing: border-box;
+    margin: 0 auto;
+    
+    ul {
+      list-style-type: none;
+      padding-inline-start: 1rem;
+      font-weight: bold;
+      li {
+        font-size: 0.9rem;
+        padding: 0.2rem;
+      }
+      
+      ul {
+        font-weight: normal;
+      }
+    }
+  
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  div.highlight {
+    background: #fff;
+    border-radius: .66em;
+  }
+
+  pre {
+    padding: 10px;
+    border: 1px solid #eee;
+    overflow-x: auto;
+  }
+
+  code {
+    color: #333;
+    background: #fff;
+  }
+
+  blockquote {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-left-color: $primary-accent-color;
+  }
+
+  strong {
+    color: $text-color;
+    text-decoration-thickness: 0.15em;
+    text-underline-offset: 0.1em;
+  }
+}

@@ -1,0 +1,100 @@
+<div class="replace-os window file">
+    <div class="replace-os window-title-bar">
+        <div class="replace-os controls close"></div>
+        <div class="replace-os controls minimize"></div>
+        <div class="replace-os controls maximize"></div>
+        <div class="replace-os window-title">new-issue.rbo</div>
+    </div>
+    <div class="window-content">
+       <table>
+           <tbody>
+               <tr>
+                   <td class="replace-os line-numbers">
+                       01<br>
+                       02<br>
+                       03<br>
+                       04<br>
+                       05<br>
+                       06<br>
+                       07<br>
+                       08<br>
+                       09<br>
+                       10<br>
+                       11<br>
+                       12<br>
+                       13<br>
+                       14<br>
+                       15<br>
+                       16<br>
+                       17<br>
+                       18<br>
+                       19<br>
+                       20<br>
+                       21<br>
+                       22<br>
+                       23<br>
+                       24<br>
+                       25<br>
+                       26<br>
+                       27<br>
+                       28<br>
+                       29<br>
+                       30<br>
+                       31<br>
+                       32<br>
+                       33<br>
+                       34<br>
+                       35<br>
+                       36<br>
+                       37<br>
+                       38<br>
+                       39<br>
+                       40<br>
+                    </td>
+                   <td>
+                <pre>
+<span class="comment">// Present choice for a project</span>
+<span class="keyword">let</span> <span class="value">issueProject</span> = <span class="item">Choice&lt;Project&gt;</span> {
+    <span class="attribute">description:</span> <span class="string">"Select project:"</span>
+    <span class="attribute">options:</span> <span class="function">GetProjects</span>()
+}.<span class="value">value</span>
+
+<span class="comment">// Show line editor to enter issue subject</span>
+<span class="keyword">let</span> <span class="value">issueSubject</span> = <span class="item">LineInput</span> {
+    <span class="attribute">description:</span> <span class="string">"Issue subject:"</span>
+}.<span class="value">value</span>
+
+<span class="comment">// Present choice for a tracker</span>
+<span class="keyword">let</span> <span class="value">issueTracker</span> = <span class="item">Choice&lt;Tracker&gt;</span> {
+    <span class="attribute">description:</span> <span class="string">"Select tracker:"</span>
+    <span class="attribute">options:</span> <span class="function">GetTrackers</span>()
+}.<span class="value">value</span>
+
+<span class="comment">// Show editor to enter multiline description</span>
+<span class="keyword">let</span> <span class="value">issueDescription</span> = <span class="item">TextInput</span> {
+    <span class="attribute">description:</span> <span class="string">"Issue description:"</span>
+}.<span class="value">value</span>
+
+<span class="comment">// Show editor to enter multiline note</span>
+<span class="keyword">let</span> <span class="value">issueNote</span> = <span class="item">TextInput</span> {
+    <span class="attribute">description:</span> <span class="string">"Issue note:"</span>
+}.<span class="value">value</span>
+
+<span class="comment">// Create issue with provided data</span>
+<span class="item">Issue</span> {
+    <span class="attribute">assignedTo:</span> <span class="function">GetCurrentUser</span>()
+    <span class="attribute">project:</span> <span class="value">issueProject</span>
+    <span class="attribute">subject:</span> <span class="value">issueSubject</span>
+    <span class="attribute">tracker:</span> <span class="value">issueTracker</span>
+    <span class="attribute">description:</span> <span class="value">issueDescription</span>
+    <span class="item">Note</span> {
+        <span class="attribute">text:</span> <span class="value">issueNote</span>
+    }
+}
+                </pre>
+               </td>
+           </tr>
+        </tbody>
+       </table>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+</head>
+<body>
+  <header>
+   <a href="/" class="redmine-boost-logo"><strong>redmineBOOST</strong></a>
+    <nav class="main">
+      <ul>
+        {% for item in site.data.routes.pages %}
+        {% if item.url == page.url or item.dir == page.dir %}<li class="current-page">{{ item.title }}</li>
+        {% else %}<li><a href="{{ item.url }}">{{ item.title }}</a></li>{% endif %}
+        {% endfor %}
+      </ul>
+    </nav>
+  </header>
+  <main class="wide" markdown="1">
+  {{ content }}
+  </main>
+  <footer>
+    <p>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100px" height="29.354px" viewBox="0 0 100 39.354">
+        <g>
+        <path d="M79.685,34.533c-0.089-1.892-0.292-6.162-0.325-6.321c-0.042-0.205-1.77,0.488-4.821,0.488s-4.779-0.693-4.821-0.488
+        c-0.034,0.159-0.236,4.43-0.325,6.321h-1.914c-0.089-1.892-0.292-6.162-0.325-6.321c-0.042-0.205-1.77,0.488-4.821,0.488
+        c-3.051,0-4.779-0.693-4.821-0.488c-0.034,0.159-0.236,4.43-0.325,6.321h-2.036c-0.071-1.465-0.146-2.237-0.184-2.53
+        c0.398,0.017,0.708,0.1,0.894,0.286c-0.125-3.061-5.282-1.542-5.824-1.815c-2.105-1.062-7.326-4.445-7.3-4.964
+        c0.025-0.518,3.891-5.347,3.891-5.347s5.273,5.521,5.868,5.55c0.595,0.03,10.304-3.535,9.11-0.417
+        c1.983-1.796,1.3-2.54,3.311-2.439c2.012,0.1,3.534-0.019,5.034,1.481c-0.276-2.36-3.314-2.723-5.488-2.831
+        c-2.174-0.108-10.564,2.398-11.272,2.515c-0.924,0.153-3.88-4.011-4.488-4.683c13.837,1.832,17.964-9.801,27.701-3.354
+        c4.177,2.766,9.031,2.019,14.046,9.321c-5.743-10.567-1.846-8.977-4.994-12.455c-2.51-2.772-10.083-2.087-15.497-6.585
+        C61.026-1.154,45.045-5.689,4.271,14.68c27.78-11.208,40.532,4.082,40.532,4.082s-4.413,6.747-4.434,7.174
+        C40.349,26.362,47,30.56,47,30.56s-2.461,0.232-2.285,2.011c0.167-0.167,0.352-0.279,0.548-0.357
+        c-0.041,0.389-0.102,1.121-0.16,2.32h-2.036c-0.089-1.892-0.292-6.162-0.325-6.321c-0.042-0.205-1.77,0.488-4.821,0.488
+        s-4.779-0.693-4.821-0.488c-0.034,0.159-0.236,4.43-0.325,6.321h-2.28c-0.088-1.892-0.292-6.162-0.325-6.321
+        c-0.042-0.205-1.769,0.488-4.821,0.488s-4.779-0.693-4.821-0.488c-0.034,0.159-0.236,4.43-0.325,6.321H0v4.821h100v-4.821H79.685z"
+        />
+        </g>
+      </svg><br>
+      <a href="/eula">License Agreement</a> | <a href="/legal-notice">Legal Notice</a> | <a href="/privacy-policy">Privacy Policy</a><br>
+      Copyright &copy; 2022 <a href="https://hicknhack-software.com">HicknHack Software GmbH</a>
+    </p>
+  </footer>
+  <script>
+    var strongElements = document.querySelectorAll('strong');
+    for(strongElement of strongElements) {
+      switch(strongElement.textContent) {
+        case 'redmineBOOST': {
+            var newNode = document.createElement('span');
+            newNode.classList.add("redmine-boost-text");
+            newNode.innerHTML = '<span class="redmine">redmine</span><span class="boost">BOOST</span>'
+            strongElement.parentNode.replaceChild(newNode, strongElement);
+          }
+          break;
+        case 'HicknHack Software GmbH': {
+            var newNode = document.createElement('span');
+            newNode.classList.add("company_name");
+            newNode.textContent = 'HicknHack Software GmbH'
+            strongElement.parentNode.replaceChild(newNode, strongElement);        
+          }
+          break;
+      }
+    }
+  </script>
+  <script src="{{ "/assets/js/hnh_platform.js" | relative_url }}"></script>
+</body>
+</html>
