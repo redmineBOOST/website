@@ -1,17 +1,17 @@
 pages:
   - title: Download
-    url: /download
+    url: /download.html
   - title: Buy
-    url: /buy
+    url: /buy.html
   - title: Documentation
-    url: /documentation/introduction
+    url: /documentation/introduction.html
     dir: /documentation/
     subpages:
       - title: Introduction
-        url: /documentation/introduction
+        url: /documentation/introduction.html
       - title: Language Guide
-        url: /documentation/language-guide
+        url: /documentation/language-guide.html
       - title: Language Reference
-        url: /documentation/language-reference
+        url: /documentation/language-reference.html
   - title: Support
-    url: /support
+    url: /support.html
