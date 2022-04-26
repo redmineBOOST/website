@@ -155,26 +155,6 @@ div.github-badge {
   }
 }
 
-
-ol.claim {
-  margin-left: 2rem;
-  margin-right: 2rem;
-  line-height: $extended-line-height;
-
-  & li::marker {
-    color: $primary-accent-color;
-  }
-}
-
-hr {
-  border-bottom: none;
-  border-left: none;
-  border-right: none;
-  border-top: $border-width solid scale-color($text-color, $lightness: 80%);
-  margin-block-start: 1rem;
-  margin-block-end: 1rem;
-}
-
 input,
 select,
 textarea {
