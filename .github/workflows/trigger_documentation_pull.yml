@@ -14,10 +14,12 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           submodules: true
       - name: Pull documentation
+        id: pulldoc
         run: |
           git pull --recurse-submodules
           git submodule update --init --recursive --remote -- documentation
       - name: Push updated documentation
+        if: ${{ pulldoc.status != 'failure' }}
         run: |
           git config --global user.name 'redmineBOOST-ci'
           git config --global user.email 'redmineboost-ci@hicknhack-software.com'
