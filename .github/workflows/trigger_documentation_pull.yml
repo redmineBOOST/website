@@ -1,0 +1,28 @@
+name: Documentation CI
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+
+jobs:
+  pull-documentation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          submodules: true
+      - name: Pull documentation
+        id: pulldoc
+        run: |
+          git pull --recurse-submodules
+          git submodule update --init --recursive --remote -- documentation
+      - name: Push updated documentation
+        if: ${{ steps.pulldoc.outcome == 'success' }}
+        run: |
+          git config --global user.name 'redmineBOOST-ci'
+          git config --global user.email 'redmineboost-ci@hicknhack-software.com'
+          git add .
+          git commit -m "Updated documentation"
+          git push
