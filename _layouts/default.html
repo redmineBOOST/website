@@ -23,7 +23,6 @@
   {{ content }}
   </main>
   <footer>
-
     {% assign path_parts = page.path | split: "/" %}
     {% if path_parts.first == "documentation" %}
       {% capture github-url %}https://github.com/{{ site.github-org }}/{{ site.github-documentation-repo }}/blob/{{ site.github-documentation-repo-branch }}/{{ page.name }}{% endcapture %}
