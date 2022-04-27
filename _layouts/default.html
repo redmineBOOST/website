@@ -9,13 +9,6 @@
 </head>
 <body>
   <header>
-  {% assign path_parts = page.path | split: "/" %}
-  {% if path_parts.first == "documentation" %}
-    {% capture github-url %}https://github.com/{{ site.github-org }}/{{ site.github-documentation-repo }}/blob/{{ site.github-documentation-repo-branch }}/{{ page.name }}{% endcapture %}
-  {% else %}
-    {% capture github-url %}https://github.com/{{ site.github-org }}/{{ site.github-site-repo }}/blob/{{ site.github-site-repo-branch }}/{{ page.path }}{% endcapture %}
-  {% endif %}
-  {% include github-badge.html url=github-url label="Contribute on GitHub" %}
    <a href="/" class="redmine-boost-logo"><strong>redmineBOOST</strong></a>
     <nav class="main">
       <ul>
@@ -30,6 +23,14 @@
   {{ content }}
   </main>
   <footer>
+
+    {% assign path_parts = page.path | split: "/" %}
+    {% if path_parts.first == "documentation" %}
+      {% capture github-url %}https://github.com/{{ site.github-org }}/{{ site.github-documentation-repo }}/blob/{{ site.github-documentation-repo-branch }}/{{ page.name }}{% endcapture %}
+    {% else %}
+      {% capture github-url %}https://github.com/{{ site.github-org }}/{{ site.github-site-repo }}/blob/{{ site.github-site-repo-branch }}/{{ page.path }}{% endcapture %}
+    {% endif %}
+    <a class="contribute-button" href="{{ github-url }}">Contribute on GitHub</a>
     <p>
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100px" height="29.354px" viewBox="0 0 100 39.354">
         <g>

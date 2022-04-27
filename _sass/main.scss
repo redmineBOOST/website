@@ -123,39 +123,6 @@ em {
   color: $text-color;
 }
 
-
-div.github-badge {
-  font-size: 0.8rem; 
-  height: 15em;
-  overflow: hidden;
-  position: fixed;
-  right: 0px;
-  top: 0px;  
-  z-index: 9999;
-  
-  a {
-    background-color: scale-color($background-color, $lightness: -80%);
-    box-shadow: 0px 0px 0.5rem rgba(0,0,0,0.3);
-    color: $secondary-accent-color;
-    display: block;
-    text-decoration: none;
-    transform: rotate(45deg);
-    margin: 0em;
-    margin-right: -6em;
-    padding-top: 0.1rem;
-    padding-bottom: 0.1rem;
-    
-    span {
-      border: 1px dotted $secondary-accent-color;
-      display: block;
-      padding-bottom: 0.15rem;
-      padding-left: 15em;
-      padding-right: 5em;
-      padding-top: 0.15rem;
-    }  
-  }
-}
-
 input,
 select,
 textarea {
@@ -638,12 +605,8 @@ form.contact {
   margin: 1rem;
   padding: 0.3rem;
   font-size: 0.9rem;
-  color: green;
+  background-color: scale-color($background-color, $lightness: -5%);
   border: $light-border-width solid $secondary-accent-color;
-  
-  svg.merge {
-    color: blue;
-  }
 }
 
 .download-button {
