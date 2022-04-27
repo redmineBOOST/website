@@ -23,6 +23,7 @@ $linux-orange: rgb(233, 84, 31);
 $linux-window-title-bar-text-color: rgb(210, 210, 210);
 
 $border-width: 3px;
+$light-border-width: 2px;
 
 $content-width: 1100px;
 
@@ -624,15 +625,33 @@ form.contact {
   gap: 20px;
 }
 
+.contribute-button,
 .download-button {
   display: inline-block;
   text-decoration: none;
   text-align: center;
   border-radius: 0.5em;
   padding: 0.6rem 0.8rem;
+}
+
+.contribute-button {
+  margin: 1rem;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  color: green;
+  border: $light-border-width solid $secondary-accent-color;
+  
+  svg.merge {
+    color: blue;
+  }
+}
+
+.download-button {
+  border-top: none;
+  border-left: none;
+  border-right: none;
   border-bottom: $border-width solid $secondary-accent-color;
   background: scale-color($secondary-accent-color, $alpha: -80%);
-  
   p {
     font-size: 0.8rem;
     margin: 0.5rem 0rem 0.5rem 0rem;

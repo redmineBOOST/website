@@ -9,6 +9,13 @@
 </head>
 <body>
   <header>
+  {% assign path_parts = page.path | split: "/" %}
+  {% if path_parts.first == "documentation" %}
+    {% capture github-url %}https://github.com/{{ site.github-org }}/{{ site.github-documentation-repo }}/blob/{{ site.github-documentation-repo-branch }}/{{ page.name }}{% endcapture %}
+  {% else %}
+    {% capture github-url %}https://github.com/{{ site.github-org }}/{{ site.github-site-repo }}/blob/{{ site.github-site-repo-branch }}/{{ page.path }}{% endcapture %}
+  {% endif %}
+  {% include github-badge.html url=github-url label="Contribute on GitHub" %}
    <a href="/" class="redmine-boost-logo"><strong>redmineBOOST</strong></a>
     <nav class="main">
       <ul>

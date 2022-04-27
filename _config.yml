@@ -1,2 +1,7 @@
 description: Programmable Processes for Redmine
 title: redmineBOOST
+github-org: redmineBOOST
+github-site-repo: redmineBOOST.github.io
+github-site-repo-branch: main
+github-documentation-repo: documentation
+github-documentation-repo-branch: main
