@@ -37,3 +37,7 @@ The data will be deleted as soon as the purpose of the processing ceases to appl
 The processing of the data provided under this section is not required by law or contract. The functionality of the website is not guaranteed without the processing.
 
 GitHub has implemented compliance measures for international data transfers. These apply to all global activities where GitHub processes personal data of individuals in the EU. These measures are based on the EU Standard Contractual Clauses (SCCs). For more information, please visit: [GitHub Data Protection Agreement](https://docs.github.com/en/site-policy/privacy-policies/github-data-protection-agreement)
+
+### Payment Processing
+
+For the payment processing of product and service sales we use the payment gateway FastSpring. FastSpring collects the following information, among others: your name, e-mail address, IP address, billing address, phone number, payment account information, and other information about you submitted to verify who you are or to work to prevent fraud. This payment information and details will be received and processed securely by our payment processor, Bright Market, LLC dba FastSpring, 801 Garden St., Santa Barbara, CA 93101, USA. https://fastspring.com/privacy
