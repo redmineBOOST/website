@@ -40,13 +40,12 @@ GitHub has implemented compliance measures for international data transfers. The
 
 ### License
 
-When a license is issued the following personal specific information is stored inside the license and securely in a customer database:
+When a license is issued the following specific personal information is stored in the provided license file and securely in a customer license database:
 
-**Id** *By* automatic generation *For* uniquely assign a license to the purchase.
-
-**License** *By* provided purchase information *For* customer service issues, legal and regulatory obligations.
-
-**Email Address** *By* provided purchase information *For* customer service issues, legal and regulatory obligations.
+|**Category**|**Information**|**Source**|**Purpose**|
+|------------|---------------|----------|-----------|
+|Identifiers|`Id`|Automatic Generation on license creation|Uniquely assign a license to a purchase|
+|Identifiers|`Licensee`, `Email`|Provided purchase information|Customer service issues, Legal and regulatory obligations|
 
 The reasons to store the data are: Necessary for Performance of Contract, Compliance with Legal Obligation, Legitimate Interest.
 
