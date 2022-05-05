@@ -760,4 +760,23 @@ div.documentation {
     text-decoration-thickness: 0.15em;
     text-underline-offset: 0.1em;
   }
+  
+  dl {
+    code {
+      font-size: 1.1em;
+    }
+    em {
+      margin-inline-start: 0.5em;
+      font-style: italic;
+    }
+  }
+  
+  dt {
+    margin-block-start: 1rem;
+  }
+  
+  dd {
+    margin-inline-start: 1em;
+  }
+  
 }
