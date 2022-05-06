@@ -1,19 +1,21 @@
-$background-color: rgb(240,240,240);
-$primary-accent-color: rgb(230,50,0);
-$secondary-accent-color: rgb(0,180,230);
+$background-color: rgb(240, 240, 240);
+$primary-accent-color: rgb(230, 50, 0);
+$secondary-accent-color: rgb(0, 180, 230);
 $tertiary-accent-color: rgb(184, 221, 159);
-$warning-color: rgb(230,100,0);
+$warning-color: rgb(230, 100, 0);
 
-$text-color: rgb(50,50,50);
+$text-color: rgb(50, 50, 50);
+$code-text-color:rgb(51, 51, 51);
+$code-background-color: rgb(255, 255, 255);
 $link-color: rgb(0, 127, 255);
-$secondary-text-color:  rgb(100,100,100);
+$secondary-text-color:  rgb(100, 100, 100);
 
 $windows-windows-background-color: rgb(247, 249, 252);
 $windows-window-title-bar-color: rgb(238, 244, 249);
 $windows-window-border-color: scale-color($windows-window-title-bar-color, $lightness: -25%);
 
-$macos-windows-background-color: rgb(255,255,255);
-$macos-window-title-bar-color: rgb(220,220,220);
+$macos-windows-background-color: rgb(255, 255, 255);
+$macos-window-title-bar-color: rgb(220, 220, 220);
 $macos-window-border-color: scale-color($macos-window-title-bar-color, $lightness: -25%);
 
 $linux-windows-background-color: rgb(247, 247, 247);
@@ -731,20 +733,22 @@ div.documentation {
     width: 100%;
   }
   
-  div.highlight {
+  /*div.highlight {
     background: #fff;
     border-radius: .66em;
-  }
+  }*/
 
   pre {
+    background: #fff;
+    border-radius: 0.3em;
     padding: 10px;
-    border: 1px solid #eee;
+    border: 1px solid scale-color($code-background-color, $lightness: -20%);
     overflow-x: auto;
   }
 
   code {
-    color: #333;
-    background: #fff;
+    color: $code-text-color;
+    background: $code-background-color;
   }
 
   blockquote {
@@ -768,7 +772,12 @@ div.documentation {
   }
   
   dt {
+    background-color: $code-background-color;
+    border-radius: 0.3em;
+    border: 1px solid scale-color($code-background-color, $lightness: -20%);
+    padding: 0.3em 0.4em;
     margin-block-start: 1rem;
+    margin-block-end: 0.5rem;
   }
   
   dd {
