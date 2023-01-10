@@ -47,7 +47,7 @@ a {
   text-decoration-color: $secondary-accent-color;
   text-decoration-thickness: 0.15em;
   color: $text-color;
-  
+
   &.redmine-boost-logo {
     display: block;
     margin-block-start: 2rem;
@@ -108,7 +108,7 @@ nav {
     padding-inline-start: 0rem;
     li {
       display: inline-block;
-      
+
       &.current-page {
         color: $secondary-accent-color;
         border: none;
@@ -185,29 +185,29 @@ div.window {
   box-shadow: 0px 3px 10px rgba(0,0,0,0.5);
   color: #333;
   font-size: 1rem;
-  margin: 3rem auto;  
+  margin: 3rem auto;
   width: 70%;
   transition: width 200ms ease-in-out;
-  @media (max-width: 500px) {    
+  @media (max-width: 500px) {
     width: 95%;
   }
-  
+
   &.macos {
     border: 1px solid $macos-window-border-color;
     background-color: $macos-windows-background-color;
   }
-  
+
   &.generic,
   &.windows {
     border: 1px solid $windows-window-border-color;
     background-color: $windows-windows-background-color;
   }
-  
+
   &.linux {
     border: 1px solid $linux-window-border-color;
     background-color: $linux-windows-background-color;
   }
-  
+
   input,
   select,
   textarea {
@@ -225,7 +225,7 @@ div.window-title-bar {
   border-top-right-radius: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  
+
   &.generic,
   &.windows {
     background-color: $windows-window-title-bar-color;
@@ -240,16 +240,16 @@ div.window-title-bar {
     color: $linux-window-title-bar-text-color
   }
 
-  
+
   &.macos {
     background-color: $macos-window-title-bar-color;
     border-bottom: 1px solid $macos-window-border-color;
   }
-  
+
   .controls {
     display: inline-block;
   }
-  
+
   .macos.controls {
     width: 12px;
     height: 12px;
@@ -260,7 +260,7 @@ div.window-title-bar {
     margin-right: 2px;
 
   }
-  
+
   .generic.controls,
   .windows.controls {
     width: 16px;
@@ -268,21 +268,21 @@ div.window-title-bar {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-  
+
   .linux.controls {
     width: 16px;
     height: 16px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
   }
-  
+
   .generic.close,
   .windows.close {
     background-color: scale-color($windows-window-border-color, $lightness: -50%);
     mask: url("/assets/images/close-light.svg");
     -webkit-mask: url("/assets/images/close-light.svg");
   }
-  
+
   .generic.minimize,
   .windows.minimize {
     background-color: scale-color($windows-window-border-color, $lightness: -50%);
@@ -302,13 +302,13 @@ div.window-title-bar {
     background-color: $linux-orange;
     background-image: url("/assets/images/close-light.svg");
   }
-  
+
   .linux.minimize {
     background-color: $linux-window-title-bar-text-color;
     mask: url("/assets/images/maximize-light.svg");
     -webkit-mask: url("/assets/images/maximize-light.svg");
   }
-  
+
   .linux.maximize {
     background-color: $linux-window-title-bar-text-color;
     mask: url("/assets/images/minimize-light.svg");
@@ -320,13 +320,13 @@ div.window-title-bar {
     background-color: $close-color;
     border-color: scale-color($close-color, $lightness: -50% );
   }
-  
+
   .macos.minimize {
     $minimize-color: rgb(255,150,0);
     background-color: $minimize-color;
     border-color: scale-color($minimize-color, $lightness: -50%);
   }
-  
+
   .macos.maximize {
     $maximize-color: rgb(150,230,0);
     background-color: $maximize-color;
@@ -338,7 +338,7 @@ div.window-title {
   display: inline-block;
   width: 80%;
   text-align: center;
-  
+
 }
 
 div.browser-address-bar {
@@ -347,20 +347,20 @@ div.browser-address-bar {
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   overflow-x: hidden;
   text-overflow: ellipsis;
-  
+
   &.generic,
   &.windows {
     border-radius: 0.3rem;
     border: 1px solid $windows-window-border-color;
     background-color: rgb(255,255,255);
   }
-  
+
   &.macos {
     border-radius: 0.3rem;
     border: 1px solid $macos-window-border-color;
-    background-color: rgb(255,255,255);    
+    background-color: rgb(255,255,255);
   }
-  
+
   &.linux {
     border-radius: 0.3rem;
     border: 1px solid scale-color($linux-window-title-bar-color, $lightness: -10%);
@@ -383,7 +383,7 @@ div.console {
     margin: 0.2rem;
     opacity: 0;
   }
-  
+
   div.visible {
     opacity: 1;
   }
@@ -420,9 +420,9 @@ div.browser {
   div.created-issue-banner {
     margin-left: 1rem;
     margin-right: 1rem;
-    padding: 0.25rem;  
+    padding: 0.25rem;
     border: 2px solid #9fcf9f;
-    background-color: #dfffdf; 
+    background-color: #dfffdf;
     color: #005f00;
   }
 
@@ -458,11 +458,11 @@ div.browser {
     color: $link-color;
     border: none;
   }
-  
+
   fieldset {
     border: 1px solid rgb(230,230,230);
   }
-  
+
   legend {
     font-size: 0.8rem;
   }
@@ -473,11 +473,11 @@ table.features-table {
   border-spacing: 0rem;
   text-align: center;
   width: 100%;
-  
+
   thead th {
     border-bottom: $border-width solid $primary-accent-color;
     line-height: 1;
-    
+
     p {
       margin-block: 0.5em;
       font-size: 0.8em;
@@ -488,24 +488,24 @@ table.features-table {
     padding: 0.25rem;
     word-break: break-word;
   }
-  
+
   tr th:first-child {
     text-align: right;
   }
-  
+
   span {
     font-size: 1.5em;
-    
+
     &.cross::after {
       content: "x";
       color: rgb(255, 61, 0);
     }
-    
+
     &.tick::after {
       content: "\2713";
       content: "\25CF";
       // content: "\2714";
-      // content: "\2295"; // circled plus 
+      // content: "\2295"; // circled plus
       //content: "Yes";
       color: rgb(21, 181, 21);
     }
@@ -518,11 +518,11 @@ div.file {
   div.window-content {
     background: rgb(240, 231, 214)
   }
-  
+
   td {
     vertical-align: top;
     font-size: 0.9rem;
-    
+
     pre {
       margin: 0rem 0.5rem;
     }
@@ -540,12 +540,12 @@ div.file {
   td.line-numbers {
     font-family: monospace;
     padding-right: 0.5rem;
-    
+
     &.generic,
     &.windows {
       border-right: 1px solid $windows-window-border-color;
     }
-    
+
     &.macos {
       border-right: 1px solid $macos-window-border-color;
     }
@@ -554,7 +554,7 @@ div.file {
       border-right: 1px solid $linux-window-border-color;
     }
 
-    
+
   }
 
 }
@@ -656,7 +656,7 @@ div.documentation {
     gap: 20px;
     grid-template-areas: "sidebar-left"
                          "sidebar-right"
-                         "content";      
+                         "content";
   }
 
   font-size: 1rem;
@@ -664,14 +664,14 @@ div.documentation {
   max-width: 1100px;
   margin-left: auto;
   margin-right: auto;
-  grid-template-columns: 3fr 1fr; 
+  grid-template-columns: 3fr 1fr;
   gap: 20px;
   grid-template-areas: "sidebar-left sidebar-left"
                        "content sidebar-right";
-  
+
   p {
     line-height: $extended-line-height;
-    
+
     code {
       font-size: 1rem;
       font-weight: bold;
@@ -679,7 +679,7 @@ div.documentation {
       border-radius: .2em;
     }
   }
-  
+
   nav {
     margin-bottom: 0rem;
     ul {
@@ -689,7 +689,7 @@ div.documentation {
       }
     }
   }
-  
+
   // FIXME: use better style name
   aside.sidebar-right {
     display: none;
@@ -701,17 +701,17 @@ div.documentation {
       overflow-x: auto;
       overflow-y: auto;
     }
-    
+
     a {
       //color: scale-color($text-color, $lightness: 80%);
     }
-  }  
-  
+  }
+
   .content {
     grid-area: content;
     min-width: 0;
   }
-  
+
   // FIXME: is this style still in use?
   .sidebar-left {
     grid-area: sidebar-left;
@@ -723,7 +723,7 @@ div.documentation {
     grid-area: sidebar-right;
     box-sizing: border-box;
     margin: 0 auto;
-    
+
     ul {
       list-style-type: none;
       padding-inline-start: 1rem;
@@ -732,18 +732,18 @@ div.documentation {
         font-size: 0.9rem;
         padding: 0.2rem;
       }
-      
+
       ul {
         font-weight: normal;
       }
     }
-  
+
   }
-  
+
   table {
     width: 100%;
   }
-  
+
   /*div.highlight {
     background: #fff;
     border-radius: .66em;
@@ -775,13 +775,13 @@ div.documentation {
     text-decoration-thickness: 0.15em;
     text-underline-offset: 0.1em;
   }
-  
+
   dl {
     em {
       font-style: italic;
     }
   }
-  
+
   dt {
     background-color: $code-background-color;
     border-radius: 0.3em;
@@ -790,9 +790,9 @@ div.documentation {
     margin-block-start: 1rem;
     margin-block-end: 0.5rem;
   }
-  
+
   dd {
     margin-inline-start: 1em;
   }
-  
+
 }
