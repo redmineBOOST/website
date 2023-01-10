@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <script src="https://webforms.hnhs.de/js/HnH.WebForms-1.0.js"></script>
+    <script>const HNH_WEBFORMS_ENDPOINT = "https://webforms.hnhs.de";</script>
 </head>
 <body>
   <header>
@@ -68,7 +70,7 @@
             var newNode = document.createElement('span');
             newNode.classList.add("company_name");
             newNode.textContent = 'HicknHack Software GmbH'
-            strongElement.parentNode.replaceChild(newNode, strongElement);        
+            strongElement.parentNode.replaceChild(newNode, strongElement);
           }
           break;
       }

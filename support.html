@@ -6,21 +6,21 @@ id: support
 <p>If you have <em>questions</em>, want to <em>know more</em> or simply want to send some <em>kind
         words</em>, feel free to contact us!</p>
 
-<h2>Email</h2>
+<h2>Contact Form</h2>
 
-<p>Send us an email. This kind of contact form uses the <code>mailto:</code> handler of your operating system. If you have not configured any <code>mailto:</code> handler your email program won't launch. In this case you can manually write us an email to <a href="mailto:redmineboost@hicknhack-software.com">redmineboost@hicknhack-software.com</a>.
-</p>
-
-<form id="mail-contact-form" class="contact">
+<form id="mail-contact-form" class="contact" data-form-key="C57F3FB8-8D6C-44FD-8A3C-D2B4537AEA48" data-locale="en" data-success-url="/">
     <table>
         <tr>
-            <td>
-                <textarea id="mail-contact-input-message" placeholder="Can you help me get boosted?"></textarea>
-                <p id="mail-contact-input-message-error-description" class="error-description">Message is required!</p>
-            </td>
+            <td><input id="contact_email" type="email" maxlength="254" name="contact_email" placeholder="Your e-mail address" required="required"></td>
         </tr>
         <tr>
-            <td><input id="mail-contact-submit" type="button" value="Send"></td>
+            <td><textarea id="message_text" maxlength="1000" name="message_text" placeholder="Can you help me get boosted?" required="required"></textarea></td>
+        </tr>
+        <tr>
+            <td><div id="captcha"></div></td>
+        </tr>
+        <tr>
+            <td><button id="contact_submit_button" type="submit">Send</button></td>
         </tr>
     </table>
 </form>
