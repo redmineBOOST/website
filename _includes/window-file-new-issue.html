@@ -55,40 +55,40 @@
                 <pre>
 <span class="comment">// Present choice for a project</span>
 <span class="keyword">let</span> <span class="value">issueProject</span> = <span class="item">Choice&lt;Project&gt;</span> {
-    <span class="attribute">description:</span> <span class="string">"Select project:"</span>
-    <span class="attribute">options:</span> <span class="function">GetProjects</span>()
-}.<span class="value">value</span>
+    <span class="attribute">description:</span> <span class="string">"Select project:"</span>;
+    <span class="attribute">options:</span> <span class="function">GetProjects</span>();
+}.<span class="value">value</span>;
 
 <span class="comment">// Show line editor to enter issue subject</span>
 <span class="keyword">let</span> <span class="value">issueSubject</span> = <span class="item">LineInput</span> {
-    <span class="attribute">description:</span> <span class="string">"Issue subject:"</span>
-}.<span class="value">value</span>
+    <span class="attribute">description:</span> <span class="string">"Issue subject:"</span>;
+}.<span class="value">value</span>;
 
 <span class="comment">// Present choice for a tracker</span>
 <span class="keyword">let</span> <span class="value">issueTracker</span> = <span class="item">Choice&lt;Tracker&gt;</span> {
-    <span class="attribute">description:</span> <span class="string">"Select tracker:"</span>
-    <span class="attribute">options:</span> <span class="function">GetTrackers</span>()
-}.<span class="value">value</span>
+    <span class="attribute">description:</span> <span class="string">"Select tracker:"</span>;
+    <span class="attribute">options:</span> <span class="function">GetTrackers</span>();
+}.<span class="value">value</span>;
 
 <span class="comment">// Show editor to enter multiline description</span>
 <span class="keyword">let</span> <span class="value">issueDescription</span> = <span class="item">TextInput</span> {
-    <span class="attribute">description:</span> <span class="string">"Issue description:"</span>
-}.<span class="value">value</span>
+    <span class="attribute">description:</span> <span class="string">"Issue description:"</span>;
+}.<span class="value">value</span>;
 
 <span class="comment">// Show editor to enter multiline note</span>
 <span class="keyword">let</span> <span class="value">issueNote</span> = <span class="item">TextInput</span> {
-    <span class="attribute">description:</span> <span class="string">"Issue note:"</span>
-}.<span class="value">value</span>
+    <span class="attribute">description:</span> <span class="string">"Issue note:"</span>;
+}.<span class="value">value</span>;
 
 <span class="comment">// Create issue with provided data</span>
 <span class="item">Issue</span> {
-    <span class="attribute">assignedTo:</span> <span class="function">GetCurrentUser</span>()
-    <span class="attribute">project:</span> <span class="value">issueProject</span>
-    <span class="attribute">subject:</span> <span class="value">issueSubject</span>
-    <span class="attribute">tracker:</span> <span class="value">issueTracker</span>
-    <span class="attribute">description:</span> <span class="value">issueDescription</span>
+    <span class="attribute">assignedTo:</span> <span class="function">GetCurrentUser</span>();
+    <span class="attribute">project:</span> <span class="value">issueProject</span>;
+    <span class="attribute">subject:</span> <span class="value">issueSubject</span>;
+    <span class="attribute">tracker:</span> <span class="value">issueTracker</span>;
+    <span class="attribute">description:</span> <span class="value">issueDescription</span>;
     <span class="item">Note</span> {
-        <span class="attribute">text:</span> <span class="value">issueNote</span>
+        <span class="attribute">text:</span> <span class="value">issueNote</span>;
     }
 }
                 </pre>
