@@ -3,9 +3,9 @@ layout: default
 title: Download
 id: download
 ---
-<p><strong>redmineBOOST</strong> can be downloaded and tested for free with a trial license. By downloading the software you agree with the terms and conditions described in the <a href="/eula">End User License Agreement</a> (EULA). If it is intended to use <strong>redmineBOOST</strong> beyond a trial, it must be purchased.</p>
+<p><strong>redmineBOOST</strong> can be downloaded and tested free of charge with a trial license. By downloading the software, you agree to the terms and conditions described in the <a href="/eula">End User License Agreement</a> (EULA). If you wish to use <strong>redmineBOOST</strong> beyond the trial period, you must purchase it.</p>
 
-<p><em>Executables are available for 64 bit platforms only.</em> Optionally <strong>redmineBOOST</strong> can be downloaded with a tutorial.</p>
+<p><em>Executables are only vailable for 64 bit platforms.</em> Optionally <strong>redmineBOOST</strong> can be downloaded with a tutorial.</p>
 
 <h1>Download</h1>
 
@@ -16,7 +16,7 @@ id: download
     <label for="with-tutorial-button">Download with tutorial.</label>
 </p>
 
-<div class="downloads">    
+<div class="downloads">
     {% for download in site.data.releases.downloads %}
     <a class="download-button" href="#" data-baseurl="{{ site.data.releases.baseurl }}" data-platform="{{ download.platform }}" data-version="{{ site.data.releases.version }}">Download for {{ download.name }}<br/>({{ download.size }} MB)
         <p>{{ download.supportedOs }}</p>
